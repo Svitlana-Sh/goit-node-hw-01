@@ -47,7 +47,7 @@ async function updateContact(id, contact) {
   try{
     const contacts = await listContacts();
     const index = contacts.findIndex((contact) => contact.id === id);
-    const newContact = [...contacts.splise(0, index), { ...contact, id}, ...contacts.splise(index + 1)];
+    const newContact = [...contacts.spliсe(0, index), { ...contact, id}, ...contacts.spliсe(index + 1)];
     await writeFile(newContact);
     return {...contact, id};
   } catch(e) {
